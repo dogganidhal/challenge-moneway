@@ -1,28 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qmb-sI-fEn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="ZyZ-0h-rdv">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CMSearchViewController" customModule="ChallengeMoneway" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qmb-sI-fEn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WtS-no-M6b">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CXN-mC-P9g" kind="relationship" relationship="rootViewController" id="2T7-gL-qWb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OLQ-BQ-xBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210.40000000000001" y="125.4872563718141"/>
+        </scene>
+        <!--Github Fetcher-->
+        <scene sceneID="5Ux-G2-x1E">
+            <objects>
+                <tableViewController id="CXN-mC-P9g" customClass="CMSearchViewController" customModule="ChallengeMoneway" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qtv-6X-UTm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="5dn-q6-0Dc">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="CXN-mC-P9g" id="CqN-e1-Uiz"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bVB-zt-Qxt">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bVB-zt-Qxt" id="2rV-bb-cZZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CXN-mC-P9g" id="bkd-tq-Ejf"/>
+                            <outlet property="delegate" destination="CXN-mC-P9g" id="zK9-ez-Nz1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Github Fetcher" id="zOy-c6-YOq"/>
+                    <connections>
+                        <outlet property="searchBar" destination="5dn-q6-0Dc" id="hw9-rV-Syr"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YZo-FR-eET" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="zrQ-3p-NSi">
+                    <connections>
+                        <outlet property="delegate" destination="CXN-mC-P9g" id="aNi-Dh-SE2"/>
+                        <outlet property="searchBar" destination="5dn-q6-0Dc" id="HcR-yC-pFn"/>
+                        <outlet property="searchContentsController" destination="CXN-mC-P9g" id="Pgj-7m-51p"/>
+                        <outlet property="searchResultsDataSource" destination="CXN-mC-P9g" id="eF0-g8-i1E"/>
+                        <outlet property="searchResultsDelegate" destination="CXN-mC-P9g" id="KK1-LH-rj8"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
+            <point key="canvasLocation" x="705" y="125"/>
         </scene>
     </scenes>
 </document>

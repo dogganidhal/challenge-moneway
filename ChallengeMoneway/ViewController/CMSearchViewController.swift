@@ -7,14 +7,39 @@
 //
 
 import UIKit
+import Moya
+import RxSwift
+import RxCocoa
 
-class CMSearchViewController: UIViewController {
-
+class CMSearchViewController: UITableViewController {
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    let disposeBag: DisposeBag = DisposeBag()
+    let provider: MoyaProvider<CMGithubApi> = MoyaProvider()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.subscribeToSearchBarEvents()
     }
 
+    private func subscribeToSearchBarEvents() {
+        self.searchBar
+            .rx.text
+            .orEmpty
+            .debounce(0.5, scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .subscribe { event in
+                switch(event) {
+                case .completed:
+                    break
+                case .next(_):
+                    break
+                case .error(_):
+                    break
+                }
+            }
+            .disposed(by: self.disposeBag)
+    }
 
 }
 

@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5668D6CF2BA0B8CAF02435BD /* Pods_ChallengeMoneway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A97C348D6D6188683DBFEA5 /* Pods_ChallengeMoneway.framework */; };
+		782D3E562237067000D3D2DD /* CMGithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782D3E552237067000D3D2DD /* CMGithubApi.swift */; };
+		782D3E5922370AF000D3D2DD /* CMRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782D3E5822370AF000D3D2DD /* CMRepository.swift */; };
 		78E36D6A2236E77100D3912C /* CMApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E36D692236E77100D3912C /* CMApplicationDelegate.swift */; };
 		78E36D6C2236E77100D3912C /* CMSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E36D6B2236E77100D3912C /* CMSearchViewController.swift */; };
 		78E36D6F2236E77100D3912C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E36D6D2236E77100D3912C /* Main.storyboard */; };
 		78E36D712236E77500D3912C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E36D702236E77500D3912C /* Assets.xcassets */; };
 		78E36D742236E77500D3912C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E36D722236E77500D3912C /* LaunchScreen.storyboard */; };
+		78F4CA65223714DB00FAF0FE /* CMGithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA64223714DB00FAF0FE /* CMGithubRepository.swift */; };
+		78F4CA67223716B100FAF0FE /* CMGithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA66223716B100FAF0FE /* CMGithubUser.swift */; };
+		78F4CA69223717E800FAF0FE /* CMBranch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA68223717E800FAF0FE /* CMBranch.swift */; };
+		78F4CA6B223719A900FAF0FE /* CMBranchProtection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA6A223719A900FAF0FE /* CMBranchProtection.swift */; };
+		78F4CA6D223719C800FAF0FE /* CMCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA6C223719C800FAF0FE /* CMCommit.swift */; };
+		78F4CA6F223719EB00FAF0FE /* CMCollaborator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA6E223719EB00FAF0FE /* CMCollaborator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A97C348D6D6188683DBFEA5 /* Pods_ChallengeMoneway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeMoneway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		782D3E552237067000D3D2DD /* CMGithubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMGithubApi.swift; sourceTree = "<group>"; };
+		782D3E5822370AF000D3D2DD /* CMRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMRepository.swift; sourceTree = "<group>"; };
 		78E36D662236E77100D3912C /* ChallengeMoneway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeMoneway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E36D692236E77100D3912C /* CMApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMApplicationDelegate.swift; sourceTree = "<group>"; };
 		78E36D6B2236E77100D3912C /* CMSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSearchViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +34,14 @@
 		78E36D702236E77500D3912C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78E36D732236E77500D3912C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78E36D752236E77500D3912C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78F4CA64223714DB00FAF0FE /* CMGithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMGithubRepository.swift; sourceTree = "<group>"; };
+		78F4CA66223716B100FAF0FE /* CMGithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMGithubUser.swift; sourceTree = "<group>"; };
+		78F4CA68223717E800FAF0FE /* CMBranch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBranch.swift; sourceTree = "<group>"; };
+		78F4CA6A223719A900FAF0FE /* CMBranchProtection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBranchProtection.swift; sourceTree = "<group>"; };
+		78F4CA6C223719C800FAF0FE /* CMCommit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCommit.swift; sourceTree = "<group>"; };
+		78F4CA6E223719EB00FAF0FE /* CMCollaborator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCollaborator.swift; sourceTree = "<group>"; };
+		A92FA7D192FAFFAD8EF8CB11 /* Pods-ChallengeMoneway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMoneway.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeMoneway/Pods-ChallengeMoneway.debug.xcconfig"; sourceTree = "<group>"; };
+		DD1664228CF24011F6357E33 /* Pods-ChallengeMoneway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMoneway.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeMoneway/Pods-ChallengeMoneway.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +49,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5668D6CF2BA0B8CAF02435BD /* Pods_ChallengeMoneway.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		782D3E542237065300D3D2DD /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				782D3E552237067000D3D2DD /* CMGithubApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		782D3E5722370AD800D3D2DD /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				782D3E5822370AF000D3D2DD /* CMRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		78E36D5D2236E77100D3912C = {
 			isa = PBXGroup;
 			children = (
 				78E36D682236E77100D3912C /* ChallengeMoneway */,
 				78E36D672236E77100D3912C /* Products */,
+				B76681AF0B4A9EB06325157B /* Pods */,
+				AAEC0368D5CDAA4600CD5E8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +93,8 @@
 		78E36D682236E77100D3912C /* ChallengeMoneway */ = {
 			isa = PBXGroup;
 			children = (
+				782D3E5722370AD800D3D2DD /* Repository */,
+				782D3E542237065300D3D2DD /* Api */,
 				78E36D7E2236E81D00D3912C /* Resources */,
 				78E36D7D2236E7FC00D3912C /* Application */,
 				78E36D7C2236E7F300D3912C /* Model */,
@@ -73,6 +114,12 @@
 		78E36D7C2236E7F300D3912C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				78F4CA64223714DB00FAF0FE /* CMGithubRepository.swift */,
+				78F4CA66223716B100FAF0FE /* CMGithubUser.swift */,
+				78F4CA68223717E800FAF0FE /* CMBranch.swift */,
+				78F4CA6A223719A900FAF0FE /* CMBranchProtection.swift */,
+				78F4CA6C223719C800FAF0FE /* CMCommit.swift */,
+				78F4CA6E223719EB00FAF0FE /* CMCollaborator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -112,6 +159,23 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		AAEC0368D5CDAA4600CD5E8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A97C348D6D6188683DBFEA5 /* Pods_ChallengeMoneway.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B76681AF0B4A9EB06325157B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A92FA7D192FAFFAD8EF8CB11 /* Pods-ChallengeMoneway.debug.xcconfig */,
+				DD1664228CF24011F6357E33 /* Pods-ChallengeMoneway.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78E36D782236E77500D3912C /* Build configuration list for PBXNativeTarget "ChallengeMoneway" */;
 			buildPhases = (
+				46DB0B344AE944CA9D10E15C /* [CP] Check Pods Manifest.lock */,
 				78E36D622236E77100D3912C /* Sources */,
 				78E36D632236E77100D3912C /* Frameworks */,
 				78E36D642236E77100D3912C /* Resources */,
+				3EAAA3781E57461F5B26DB00 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,12 +244,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3EAAA3781E57461F5B26DB00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChallengeMoneway/Pods-ChallengeMoneway-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChallengeMoneway/Pods-ChallengeMoneway-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46DB0B344AE944CA9D10E15C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChallengeMoneway-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		78E36D622236E77100D3912C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78F4CA6B223719A900FAF0FE /* CMBranchProtection.swift in Sources */,
+				782D3E562237067000D3D2DD /* CMGithubApi.swift in Sources */,
+				782D3E5922370AF000D3D2DD /* CMRepository.swift in Sources */,
+				78F4CA6D223719C800FAF0FE /* CMCommit.swift in Sources */,
+				78F4CA65223714DB00FAF0FE /* CMGithubRepository.swift in Sources */,
+				78F4CA67223716B100FAF0FE /* CMGithubUser.swift in Sources */,
 				78E36D6C2236E77100D3912C /* CMSearchViewController.swift in Sources */,
+				78F4CA6F223719EB00FAF0FE /* CMCollaborator.swift in Sources */,
+				78F4CA69223717E800FAF0FE /* CMBranch.swift in Sources */,
 				78E36D6A2236E77100D3912C /* CMApplicationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +451,7 @@
 		};
 		78E36D792236E77500D3912C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A92FA7D192FAFFAD8EF8CB11 /* Pods-ChallengeMoneway.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -339,6 +463,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.dogganidhal.ChallengeMoneway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -346,6 +471,7 @@
 		};
 		78E36D7A2236E77500D3912C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD1664228CF24011F6357E33 /* Pods-ChallengeMoneway.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -357,6 +483,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.dogganidhal.ChallengeMoneway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
