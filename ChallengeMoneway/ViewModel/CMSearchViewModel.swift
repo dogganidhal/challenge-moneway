@@ -15,16 +15,15 @@ class CMSearchViewModel {
     private let provider: CMGithubProvider = CMGithubProvider()
     
     let query: BehaviorRelay<String> = BehaviorRelay(value: String())
-    lazy var repositories: Driver<[CMGithubRepository]> = {
-       
-       return query.asObservable()
-            .distinctUntilChanged()
-            .flatMapLatest({ (query) -> Observable<CMGithubRepositorySearchResponse> in
-                return self.provider.search(query)
-            })
-            .map({ return $0.repositories })
-            .asDriver(onErrorJustReturn: [])
-        
-        }()
+    
+    lazy var repositories: Observable<[CMGithubRepository]> = self.result.asObservable()
+        .flatMapLatest({ return Observable.of($0.repositories) })
+        .asObservable()
+    
+    private lazy var result: Observable<CMGithubRepositorySearchResponse> = self.query.asObservable()
+        .throttle(0.2, scheduler: MainScheduler.instance)
+        .distinctUntilChanged()
+        .flatMapLatest(self.provider.search)
+        .asObservable()
     
 }

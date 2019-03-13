@@ -20,4 +20,6 @@ struct CMGithubRepositorySearchResponse: Codable {
         case repositories = "items"
     }
     
+    static var empty: CMGithubRepositorySearchResponse = CMGithubRepositorySearchResponse(totalCount: 0, hasMoreResults: false, repositories: [])
+    
 }

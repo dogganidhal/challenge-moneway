@@ -21,7 +21,7 @@ class CMGithubProvider {
         return self.provider.rx.request(.searchRepositories(query: query))
             .asObservable()
             .map(CMGithubRepositorySearchResponse.self)
-            //            .catchErrorJustReturn(CMGithubRepositorySearchResponse()) TODO: return data from the cache
+            .catchErrorJustReturn(.empty)
             .asObservable()
     }
     

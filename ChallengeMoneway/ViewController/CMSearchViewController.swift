@@ -40,19 +40,16 @@ class CMSearchViewController: UIViewController, UISearchBarDelegate {
 
     private func subscribeToSearchBarEvents() {
         
-        self.searchController.searchBar.rx.text.orEmpty
-            .map({ (query) -> String in
-                print(query)
-                return query
-            })
-            .bind(to: self.viewModel.query)
-            .disposed(by: self.disposeBag)
-        
         self.viewModel.repositories
-            .drive(self.tableView.rx.items(cellIdentifier: CMRepositoryCell.reuseIdentifier, cellType: CMRepositoryCell.self)) {
+            .bind(to: self.tableView.rx.items(cellIdentifier: CMRepositoryCell.reuseIdentifier, cellType: CMRepositoryCell.self)) {
                 (_, repository: CMGithubRepository, cell: CMRepositoryCell) in
                 cell.repository = repository
             }
+            .disposed(by: self.disposeBag)
+        
+        self.searchController.searchBar.rx.text
+            .map({ return $0 ?? "" })
+            .bind(to: self.viewModel.query)
             .disposed(by: self.disposeBag)
         
     }
