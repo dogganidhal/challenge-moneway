@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="KGk-i7-Jjw" customClass="CMRepositoryCell" customModule="ChallengeMoneway" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="203" translatesAutoresizingMaskIntoConstraints="NO" id="DTU-Wm-TPn">
+                        <rect key="frame" x="8" y="8" width="304" height="20.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="751" text="Repository Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ead-tN-5za">
+                                <rect key="frame" x="0.0" y="0.0" width="232" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFi-1a-ncy">
+                                <rect key="frame" x="240" y="0.0" width="64" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="DFi-1a-ncy" firstAttribute="leading" secondItem="Ead-tN-5za" secondAttribute="trailing" constant="8" id="M9G-8h-hKg"/>
+                            <constraint firstAttribute="trailing" secondItem="DFi-1a-ncy" secondAttribute="trailing" id="vbX-Oq-g56"/>
+                        </constraints>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="203" translatesAutoresizingMaskIntoConstraints="NO" id="2dy-8K-Krd">
+                        <rect key="frame" x="8" y="38.5" width="304" height="17"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" text="Repository Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJS-zX-Tde">
+                                <rect key="frame" x="0.0" y="0.0" width="147" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Star Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPm-3c-Mgj">
+                                <rect key="frame" x="234.5" y="0.0" width="69.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zPm-3c-Mgj" secondAttribute="trailing" id="NTC-nP-8bV"/>
+                            <constraint firstItem="zPm-3c-Mgj" firstAttribute="leading" secondItem="pJS-zX-Tde" secondAttribute="trailing" constant="8" id="fO3-nz-4Pw"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DTU-Wm-TPn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="521-rO-aFl"/>
+                    <constraint firstAttribute="bottom" secondItem="2dy-8K-Krd" secondAttribute="bottom" constant="8" id="5hg-r6-Zcj"/>
+                    <constraint firstItem="DTU-Wm-TPn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="P6r-8Z-Hhe"/>
+                    <constraint firstAttribute="trailing" secondItem="2dy-8K-Krd" secondAttribute="trailing" constant="8" id="f0Y-RF-GkP"/>
+                    <constraint firstItem="2dy-8K-Krd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="gVd-1W-VNZ"/>
+                    <constraint firstAttribute="trailing" secondItem="DTU-Wm-TPn" secondAttribute="trailing" constant="8" id="njl-Pr-Qdw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="languageLabel" destination="DFi-1a-ncy" id="nIm-Z6-qbm"/>
+                <outlet property="repositoryDescriptionLabel" destination="pJS-zX-Tde" id="2As-5K-7Lb"/>
+                <outlet property="repositoryNameLabel" destination="Ead-tN-5za" id="UYp-wc-c1z"/>
+                <outlet property="starCountLabel" destination="zPm-3c-Mgj" id="XJu-HW-o0a"/>
+            </connections>
+            <point key="canvasLocation" x="132.80000000000001" y="163.71814092953525"/>
+        </tableViewCell>
+    </objects>
+</document>

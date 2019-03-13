@@ -11,15 +11,15 @@ import Moya
 
 enum CMGithubApi: TargetType {
     
-    case searchRespositories(query: String)
+    case searchRepositories(query: String)
     case getBranches(ownerId: String, repositoryName: String)
     case getCollaborators(ownerId: String, repositoryName: String)
     
     var baseURL: URL { return URL(string: "https://api.github.com")! }
     var path: String {
         switch self {
-        case .searchRespositories(let query):
-            return "/search/repositories?q=\(query)"
+        case .searchRepositories:
+            return "/search/repositories"
         case .getBranches(let ownerId, let repositoryName):
             return "/repos/\(ownerId)/\(repositoryName)/branches"
         case .getCollaborators(let ownerId, let repositoryName):
@@ -28,12 +28,17 @@ enum CMGithubApi: TargetType {
     }
     var method: Moya.Method {
         switch self {
-        case .searchRespositories, .getBranches, .getCollaborators:
+        case .searchRepositories, .getBranches, .getCollaborators:
             return .get
         }
     }
     var task: Task {
-        return .requestPlain
+        switch self {
+        case .searchRepositories(let query):
+            return .requestParameters(parameters: ["q": query], encoding: URLEncoding.default)
+        default:
+            return .requestPlain
+        }
     }
     var sampleData: Data {
         switch self {
@@ -91,7 +96,7 @@ enum CMGithubApi: TargetType {
                 }
             ]
             """.data(using: .utf8)!
-        case .searchRespositories:
+        case .searchRepositories:
             return """
             {
               "total_count": 40,

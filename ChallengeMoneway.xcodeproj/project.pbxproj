@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5668D6CF2BA0B8CAF02435BD /* Pods_ChallengeMoneway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A97C348D6D6188683DBFEA5 /* Pods_ChallengeMoneway.framework */; };
 		782D3E562237067000D3D2DD /* CMGithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782D3E552237067000D3D2DD /* CMGithubApi.swift */; };
-		782D3E5922370AF000D3D2DD /* CMRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782D3E5822370AF000D3D2DD /* CMRepository.swift */; };
 		78E36D6A2236E77100D3912C /* CMApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E36D692236E77100D3912C /* CMApplicationDelegate.swift */; };
 		78E36D6C2236E77100D3912C /* CMSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E36D6B2236E77100D3912C /* CMSearchViewController.swift */; };
 		78E36D6F2236E77100D3912C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E36D6D2236E77100D3912C /* Main.storyboard */; };
@@ -21,12 +20,17 @@
 		78F4CA6B223719A900FAF0FE /* CMBranchProtection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA6A223719A900FAF0FE /* CMBranchProtection.swift */; };
 		78F4CA6D223719C800FAF0FE /* CMCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA6C223719C800FAF0FE /* CMCommit.swift */; };
 		78F4CA6F223719EB00FAF0FE /* CMCollaborator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA6E223719EB00FAF0FE /* CMCollaborator.swift */; };
+		78F4CA792237A86100FAF0FE /* CMGithubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA782237A86100FAF0FE /* CMGithubProvider.swift */; };
+		78F4CA7B2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA7A2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift */; };
+		78F4CA7D2237CE2100FAF0FE /* CMCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA7C2237CE2100FAF0FE /* CMCacheProvider.swift */; };
+		78F4CA83223931C900FAF0FE /* CMRepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA81223931C900FAF0FE /* CMRepositoryCell.swift */; };
+		78F4CA84223931C900FAF0FE /* CMRepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F4CA82223931C900FAF0FE /* CMRepositoryCell.xib */; };
+		78F4CA862239367100FAF0FE /* CMSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA852239367100FAF0FE /* CMSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4A97C348D6D6188683DBFEA5 /* Pods_ChallengeMoneway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeMoneway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		782D3E552237067000D3D2DD /* CMGithubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMGithubApi.swift; sourceTree = "<group>"; };
-		782D3E5822370AF000D3D2DD /* CMRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMRepository.swift; sourceTree = "<group>"; };
 		78E36D662236E77100D3912C /* ChallengeMoneway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeMoneway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E36D692236E77100D3912C /* CMApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMApplicationDelegate.swift; sourceTree = "<group>"; };
 		78E36D6B2236E77100D3912C /* CMSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSearchViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +44,12 @@
 		78F4CA6A223719A900FAF0FE /* CMBranchProtection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBranchProtection.swift; sourceTree = "<group>"; };
 		78F4CA6C223719C800FAF0FE /* CMCommit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCommit.swift; sourceTree = "<group>"; };
 		78F4CA6E223719EB00FAF0FE /* CMCollaborator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCollaborator.swift; sourceTree = "<group>"; };
+		78F4CA782237A86100FAF0FE /* CMGithubProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMGithubProvider.swift; sourceTree = "<group>"; };
+		78F4CA7A2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMGithubRepositorySearchResponse.swift; sourceTree = "<group>"; };
+		78F4CA7C2237CE2100FAF0FE /* CMCacheProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCacheProvider.swift; sourceTree = "<group>"; };
+		78F4CA81223931C900FAF0FE /* CMRepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMRepositoryCell.swift; sourceTree = "<group>"; };
+		78F4CA82223931C900FAF0FE /* CMRepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CMRepositoryCell.xib; sourceTree = "<group>"; };
+		78F4CA852239367100FAF0FE /* CMSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSearchViewModel.swift; sourceTree = "<group>"; };
 		A92FA7D192FAFFAD8EF8CB11 /* Pods-ChallengeMoneway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMoneway.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeMoneway/Pods-ChallengeMoneway.debug.xcconfig"; sourceTree = "<group>"; };
 		DD1664228CF24011F6357E33 /* Pods-ChallengeMoneway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMoneway.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeMoneway/Pods-ChallengeMoneway.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,16 +70,10 @@
 			isa = PBXGroup;
 			children = (
 				782D3E552237067000D3D2DD /* CMGithubApi.swift */,
+				78F4CA782237A86100FAF0FE /* CMGithubProvider.swift */,
+				78F4CA7C2237CE2100FAF0FE /* CMCacheProvider.swift */,
 			);
 			path = Api;
-			sourceTree = "<group>";
-		};
-		782D3E5722370AD800D3D2DD /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				782D3E5822370AF000D3D2DD /* CMRepository.swift */,
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 		78E36D5D2236E77100D3912C = {
@@ -93,12 +97,13 @@
 		78E36D682236E77100D3912C /* ChallengeMoneway */ = {
 			isa = PBXGroup;
 			children = (
-				782D3E5722370AD800D3D2DD /* Repository */,
+				78F4CA7322378F3700FAF0FE /* View */,
+				78F4CA7022378E2F00FAF0FE /* ViewModel */,
 				782D3E542237065300D3D2DD /* Api */,
-				78E36D7E2236E81D00D3912C /* Resources */,
 				78E36D7D2236E7FC00D3912C /* Application */,
 				78E36D7C2236E7F300D3912C /* Model */,
 				78E36D7B2236E7E500D3912C /* ViewController */,
+				78E36D7E2236E81D00D3912C /* Resources */,
 			);
 			path = ChallengeMoneway;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 				78F4CA6A223719A900FAF0FE /* CMBranchProtection.swift */,
 				78F4CA6C223719C800FAF0FE /* CMCommit.swift */,
 				78F4CA6E223719EB00FAF0FE /* CMCollaborator.swift */,
+				78F4CA7A2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,6 +163,31 @@
 				78E36D752236E77500D3912C /* Info.plist */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		78F4CA7022378E2F00FAF0FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				78F4CA852239367100FAF0FE /* CMSearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		78F4CA7322378F3700FAF0FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78F4CA80223931B400FAF0FE /* CMRepositoryCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		78F4CA80223931B400FAF0FE /* CMRepositoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				78F4CA81223931C900FAF0FE /* CMRepositoryCell.swift */,
+				78F4CA82223931C900FAF0FE /* CMRepositoryCell.xib */,
+			);
+			path = CMRepositoryCell;
 			sourceTree = "<group>";
 		};
 		AAEC0368D5CDAA4600CD5E8E /* Frameworks */ = {
@@ -237,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78E36D742236E77500D3912C /* LaunchScreen.storyboard in Resources */,
+				78F4CA84223931C900FAF0FE /* CMRepositoryCell.xib in Resources */,
 				78E36D712236E77500D3912C /* Assets.xcassets in Resources */,
 				78E36D6F2236E77100D3912C /* Main.storyboard in Resources */,
 			);
@@ -299,10 +331,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				78F4CA6B223719A900FAF0FE /* CMBranchProtection.swift in Sources */,
+				78F4CA7B2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift in Sources */,
 				782D3E562237067000D3D2DD /* CMGithubApi.swift in Sources */,
-				782D3E5922370AF000D3D2DD /* CMRepository.swift in Sources */,
+				78F4CA862239367100FAF0FE /* CMSearchViewModel.swift in Sources */,
+				78F4CA7D2237CE2100FAF0FE /* CMCacheProvider.swift in Sources */,
 				78F4CA6D223719C800FAF0FE /* CMCommit.swift in Sources */,
 				78F4CA65223714DB00FAF0FE /* CMGithubRepository.swift in Sources */,
+				78F4CA792237A86100FAF0FE /* CMGithubProvider.swift in Sources */,
+				78F4CA83223931C900FAF0FE /* CMRepositoryCell.swift in Sources */,
 				78F4CA67223716B100FAF0FE /* CMGithubUser.swift in Sources */,
 				78E36D6C2236E77100D3912C /* CMSearchViewController.swift in Sources */,
 				78F4CA6F223719EB00FAF0FE /* CMCollaborator.swift in Sources */,

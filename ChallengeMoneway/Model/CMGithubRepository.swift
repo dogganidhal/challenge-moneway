@@ -17,19 +17,19 @@ struct CMGithubRepository: Codable {
     let fullName: String
     let `private`: Bool
     let htmlUrl: String
-    let description: String
+    let description: String?
     let fork: Bool
-    let createdAt: Date
-    let updatedAt: Date
-    let pushedAt: Date
+    let createdAt: String
+    let updatedAt: String
+    let pushedAt: String
     let homePage: String?
     let size: Int
     let stargazersCount: Int
     let watchersCount: Int
-    let language: String
+    let language: String?
     let forkCount: Int
     let openIssuesCount: Int
-    let masterBranch: String
+    let masterBranch: String?
     let defaultBranch: String
     let score: Double
     
@@ -51,7 +51,7 @@ struct CMGithubRepository: Codable {
         case stargazersCount = "stargazers_count"
         case watchersCount = "watchers_count"
         case language
-        case forkCount = "fork_count"
+        case forkCount = "forks"
         case openIssuesCount = "open_issues_count"
         case masterBranch = "master_branch"
         case defaultBranch = "default_branch"
