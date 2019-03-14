@@ -13,7 +13,7 @@ enum CMGithubApi: TargetType {
     
     case searchRepositories(query: String)
     case getBranches(ownerId: String, repositoryName: String)
-    case getCollaborators(ownerId: String, repositoryName: String)
+    case getContributors(ownerId: String, repositoryName: String)
     
     var baseURL: URL { return URL(string: "https://api.github.com")! }
     var path: String {
@@ -22,13 +22,13 @@ enum CMGithubApi: TargetType {
             return "/search/repositories"
         case .getBranches(let ownerId, let repositoryName):
             return "/repos/\(ownerId)/\(repositoryName)/branches"
-        case .getCollaborators(let ownerId, let repositoryName):
-            return "/repos/\(ownerId)/\(repositoryName)/collaborators"
+        case .getContributors(let ownerId, let repositoryName):
+            return "/repos/\(ownerId)/\(repositoryName)/contributors"
         }
     }
     var method: Moya.Method {
         switch self {
-        case .searchRepositories, .getBranches, .getCollaborators:
+        case .searchRepositories, .getBranches, .getContributors:
             return .get
         }
     }
@@ -42,7 +42,7 @@ enum CMGithubApi: TargetType {
     }
     var sampleData: Data {
         switch self {
-        case .getCollaborators:
+        case .getContributors:
             return """
             [
                 {

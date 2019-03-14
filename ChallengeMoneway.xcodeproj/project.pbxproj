@@ -19,7 +19,7 @@
 		78F4CA69223717E800FAF0FE /* CMBranch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA68223717E800FAF0FE /* CMBranch.swift */; };
 		78F4CA6B223719A900FAF0FE /* CMBranchProtection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA6A223719A900FAF0FE /* CMBranchProtection.swift */; };
 		78F4CA6D223719C800FAF0FE /* CMCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA6C223719C800FAF0FE /* CMCommit.swift */; };
-		78F4CA6F223719EB00FAF0FE /* CMCollaborator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA6E223719EB00FAF0FE /* CMCollaborator.swift */; };
+		78F4CA6F223719EB00FAF0FE /* CMContributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA6E223719EB00FAF0FE /* CMContributor.swift */; };
 		78F4CA792237A86100FAF0FE /* CMGithubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA782237A86100FAF0FE /* CMGithubProvider.swift */; };
 		78F4CA7B2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA7A2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift */; };
 		78F4CA7D2237CE2100FAF0FE /* CMCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA7C2237CE2100FAF0FE /* CMCacheProvider.swift */; };
@@ -29,8 +29,8 @@
 		78F4CA8D2239D43E00FAF0FE /* CMRepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA8C2239D43E00FAF0FE /* CMRepositoryViewController.swift */; };
 		78F4CA8F2239D62700FAF0FE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA8E2239D62700FAF0FE /* Constants.swift */; };
 		78F4CA912239DB0700FAF0FE /* CMRepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA902239DB0700FAF0FE /* CMRepositoryViewModel.swift */; };
-		78F4CA952239DEB100FAF0FE /* CMCollaboratorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA932239DEB100FAF0FE /* CMCollaboratorCell.swift */; };
-		78F4CA962239DEB100FAF0FE /* CMCollaboratorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F4CA942239DEB100FAF0FE /* CMCollaboratorCell.xib */; };
+		78F4CA952239DEB100FAF0FE /* CMContributorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA932239DEB100FAF0FE /* CMContributorCell.swift */; };
+		78F4CA962239DEB100FAF0FE /* CMContributorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F4CA942239DEB100FAF0FE /* CMContributorCell.xib */; };
 		78F4CA9A2239E40700FAF0FE /* CMBranchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA982239E40700FAF0FE /* CMBranchCell.swift */; };
 		78F4CA9B2239E40700FAF0FE /* CMBranchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F4CA992239E40700FAF0FE /* CMBranchCell.xib */; };
 /* End PBXBuildFile section */
@@ -50,7 +50,7 @@
 		78F4CA68223717E800FAF0FE /* CMBranch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBranch.swift; sourceTree = "<group>"; };
 		78F4CA6A223719A900FAF0FE /* CMBranchProtection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBranchProtection.swift; sourceTree = "<group>"; };
 		78F4CA6C223719C800FAF0FE /* CMCommit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCommit.swift; sourceTree = "<group>"; };
-		78F4CA6E223719EB00FAF0FE /* CMCollaborator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCollaborator.swift; sourceTree = "<group>"; };
+		78F4CA6E223719EB00FAF0FE /* CMContributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMContributor.swift; sourceTree = "<group>"; };
 		78F4CA782237A86100FAF0FE /* CMGithubProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMGithubProvider.swift; sourceTree = "<group>"; };
 		78F4CA7A2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMGithubRepositorySearchResponse.swift; sourceTree = "<group>"; };
 		78F4CA7C2237CE2100FAF0FE /* CMCacheProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCacheProvider.swift; sourceTree = "<group>"; };
@@ -60,8 +60,8 @@
 		78F4CA8C2239D43E00FAF0FE /* CMRepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMRepositoryViewController.swift; sourceTree = "<group>"; };
 		78F4CA8E2239D62700FAF0FE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		78F4CA902239DB0700FAF0FE /* CMRepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMRepositoryViewModel.swift; sourceTree = "<group>"; };
-		78F4CA932239DEB100FAF0FE /* CMCollaboratorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCollaboratorCell.swift; sourceTree = "<group>"; };
-		78F4CA942239DEB100FAF0FE /* CMCollaboratorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CMCollaboratorCell.xib; sourceTree = "<group>"; };
+		78F4CA932239DEB100FAF0FE /* CMContributorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMContributorCell.swift; sourceTree = "<group>"; };
+		78F4CA942239DEB100FAF0FE /* CMContributorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CMContributorCell.xib; sourceTree = "<group>"; };
 		78F4CA982239E40700FAF0FE /* CMBranchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBranchCell.swift; sourceTree = "<group>"; };
 		78F4CA992239E40700FAF0FE /* CMBranchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CMBranchCell.xib; sourceTree = "<group>"; };
 		A92FA7D192FAFFAD8EF8CB11 /* Pods-ChallengeMoneway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMoneway.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeMoneway/Pods-ChallengeMoneway.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 				78F4CA68223717E800FAF0FE /* CMBranch.swift */,
 				78F4CA6A223719A900FAF0FE /* CMBranchProtection.swift */,
 				78F4CA6C223719C800FAF0FE /* CMCommit.swift */,
-				78F4CA6E223719EB00FAF0FE /* CMCollaborator.swift */,
+				78F4CA6E223719EB00FAF0FE /* CMContributor.swift */,
 				78F4CA7A2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift */,
 			);
 			path = Model;
@@ -194,7 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				78F4CA972239E3F000FAF0FE /* CMBranchCell */,
-				78F4CA922239DE9300FAF0FE /* CMCollaboratorCell */,
+				78F4CA922239DE9300FAF0FE /* CMContributorCell */,
 				78F4CA80223931B400FAF0FE /* CMRepositoryCell */,
 			);
 			path = View;
@@ -217,13 +217,13 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		78F4CA922239DE9300FAF0FE /* CMCollaboratorCell */ = {
+		78F4CA922239DE9300FAF0FE /* CMContributorCell */ = {
 			isa = PBXGroup;
 			children = (
-				78F4CA932239DEB100FAF0FE /* CMCollaboratorCell.swift */,
-				78F4CA942239DEB100FAF0FE /* CMCollaboratorCell.xib */,
+				78F4CA932239DEB100FAF0FE /* CMContributorCell.swift */,
+				78F4CA942239DEB100FAF0FE /* CMContributorCell.xib */,
 			);
-			path = CMCollaboratorCell;
+			path = CMContributorCell;
 			sourceTree = "<group>";
 		};
 		78F4CA972239E3F000FAF0FE /* CMBranchCell */ = {
@@ -316,7 +316,7 @@
 				78F4CA9B2239E40700FAF0FE /* CMBranchCell.xib in Resources */,
 				78F4CA84223931C900FAF0FE /* CMRepositoryCell.xib in Resources */,
 				78E36D712236E77500D3912C /* Assets.xcassets in Resources */,
-				78F4CA962239DEB100FAF0FE /* CMCollaboratorCell.xib in Resources */,
+				78F4CA962239DEB100FAF0FE /* CMContributorCell.xib in Resources */,
 				78E36D6F2236E77100D3912C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,9 +401,9 @@
 				78F4CA67223716B100FAF0FE /* CMGithubUser.swift in Sources */,
 				78F4CA9A2239E40700FAF0FE /* CMBranchCell.swift in Sources */,
 				78E36D6C2236E77100D3912C /* CMSearchViewController.swift in Sources */,
-				78F4CA6F223719EB00FAF0FE /* CMCollaborator.swift in Sources */,
+				78F4CA6F223719EB00FAF0FE /* CMContributor.swift in Sources */,
 				78F4CA69223717E800FAF0FE /* CMBranch.swift in Sources */,
-				78F4CA952239DEB100FAF0FE /* CMCollaboratorCell.swift in Sources */,
+				78F4CA952239DEB100FAF0FE /* CMContributorCell.swift in Sources */,
 				78F4CA912239DB0700FAF0FE /* CMRepositoryViewModel.swift in Sources */,
 				78E36D6A2236E77100D3912C /* CMApplicationDelegate.swift in Sources */,
 			);

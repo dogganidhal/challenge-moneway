@@ -23,22 +23,24 @@ class CMRepositoryViewController: UIViewController {
     }
     var viewModel: CMRepositoryViewModel?
     let disposeBag: DisposeBag = DisposeBag()
-    let tableDataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, CMRepositoryTableViewSection>>(configureCell: { (dataSource, tableView, indexPath, section) -> UITableViewCell in
+    let tableDataSource = RxTableViewSectionedReloadDataSource<CMRepositoryTableViewSection>(configureCell: { (dataSource, tableView, indexPath, section) -> UITableViewCell in
         switch (section) {
-        case .branches(let branches):
+        case .branch(let branch):
             if let cell = tableView.dequeueReusableCell(withIdentifier: CMBranchCell.reuseIdentifier) as? CMBranchCell {
-                cell.branch = branches[indexPath.row]
+                cell.branch = branch
+                return cell
             }
             break
-        case .collaborators(let collaborators):
-            if let cell = tableView.dequeueReusableCell(withIdentifier: CMCollaboratorCell.reuseIdentifier) as? CMCollaboratorCell {
-                cell.collaborator = collaborators[indexPath.row]
+        case .contributor(let contributor):
+            if let cell = tableView.dequeueReusableCell(withIdentifier: CMContributorCell.reuseIdentifier) as? CMContributorCell {
+                cell.contributor = contributor
+                return cell
             }
             break
         }
         return UITableViewCell()
-    }, titleForHeaderInSection: { _, index in
-        return index == 0 ? "Collaborators" : "Branches"
+    }, titleForHeaderInSection: { dataSource, index in
+        return dataSource.sectionModels[index].model
     })
     
     @IBOutlet weak var tableView: UITableView!
@@ -50,24 +52,8 @@ class CMRepositoryViewController: UIViewController {
     }
     
     private func setupTableView() {
-        self.tableDataSource.configureCell = { (dataSource, tableView, indexPath, section) -> UITableViewCell in
-            switch (section) {
-            case .branches(let branches):
-                if let cell = tableView.dequeueReusableCell(withIdentifier: CMBranchCell.reuseIdentifier) as? CMBranchCell {
-                    cell.branch = branches[indexPath.row]
-                }
-                break
-            case .collaborators(let collaborators):
-                if let cell = tableView.dequeueReusableCell(withIdentifier: CMCollaboratorCell.reuseIdentifier) as? CMCollaboratorCell {
-                    cell.collaborator = collaborators[indexPath.row]
-                }
-                break
-            }
-            return UITableViewCell()
-        }
-        self.tableDataSource.titleForHeaderInSection = { _, index in
-            return index == 0 ? "Collaborators" : "Branches"
-        }
+        self.tableView.register(UINib(nibName: "CMBranchCell", bundle: nil), forCellReuseIdentifier: CMBranchCell.reuseIdentifier)
+        self.tableView.register(UINib(nibName: "CMContributorCell", bundle: nil), forCellReuseIdentifier: CMContributorCell.reuseIdentifier)
     }
     
     private func subscribeToViewModel() {
@@ -75,7 +61,6 @@ class CMRepositoryViewController: UIViewController {
             viewModel.sections
                 .bind(to: self.tableView.rx.items(dataSource: self.tableDataSource))
                 .disposed(by: self.disposeBag)
-            
         }
     }
 

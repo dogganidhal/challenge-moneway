@@ -1,5 +1,5 @@
 //
-//  CMCollaborator.swift
+//  CMContributor.swift
 //  ChallengeMoneway
 //
 //  Created by Nidhal DOGGA on 11/03/2019.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct CMCollaborator: Codable {
+struct CMContributor: Codable {
     
     let login: String
     let id: Int
@@ -29,7 +29,7 @@ struct CMCollaborator: Codable {
     let receivedEventsUrl: String
     let type: String
     let siteAdmin: Bool
-    let permissions: [String: Bool]
+    let permissions: [String: Bool]?
     
     enum CodingKeys: String, CodingKey {
         case login

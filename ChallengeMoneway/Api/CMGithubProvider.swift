@@ -15,7 +15,7 @@ class CMGithubProvider {
     static let shared: CMGithubProvider = CMGithubProvider()
     
     let provider: MoyaProvider<CMGithubApi> = MoyaProvider()
-    let cacheProvider: Any = "CacheProvider"
+    let cacheProvider: CMCacheProvider = CMCacheProvider()
     
     func search(_ query: String) -> Observable<CMGithubRepositorySearchResponse> {
         return self.provider.rx.request(.searchRepositories(query: query))
@@ -33,10 +33,10 @@ class CMGithubProvider {
             .asObservable()
     }
     
-    func getCollaborators(forRepository repositoryName: String, ownerId: String) -> Observable<[CMCollaborator]> {
-        return self.provider.rx.request(.getCollaborators(ownerId: ownerId, repositoryName: repositoryName))
+    func getContributors(forRepository repositoryName: String, ownerId: String) -> Observable<[CMContributor]> {
+        return self.provider.rx.request(.getContributors(ownerId: ownerId, repositoryName: repositoryName))
             .asObservable()
-            .map([CMCollaborator].self)
+            .map([CMContributor].self)
             //            .catchErrorJustReturn(CMGithubRepositorySearchResponse()) TODO: return data from the cache
             .asObservable()
     }
