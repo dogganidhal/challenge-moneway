@@ -1,40 +1,66 @@
 PODS:
   - Alamofire (4.8.1)
+  - Differentiator (3.1.0)
+  - FLAnimatedImage (1.0.12)
   - Moya/Core (12.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.0)
   - Moya/RxSwift (12.0.1):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - PINCache (2.3)
+  - PINRemoteImage (2.1.4):
+    - PINRemoteImage/FLAnimatedImage (= 2.1.4)
+  - PINRemoteImage/Core (2.1.4):
+    - PINCache (>= 2.1)
+  - PINRemoteImage/FLAnimatedImage (2.1.4):
+    - FLAnimatedImage (>= 1.0)
+    - PINRemoteImage/Core
   - Result (4.1.0)
   - RxAtomic (4.4.1)
   - RxCocoa (4.4.1):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.4.1):
     - RxAtomic (~> 4.4)
 
 DEPENDENCIES:
-  - Moya/RxSwift (~> 12.0)
+  - Moya/RxSwift
+  - PINRemoteImage
   - RxCocoa
-  - RxSwift (~> 4.0)
+  - RxDataSources
+  - RxSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Differentiator
+    - FLAnimatedImage
     - Moya
+    - PINCache
+    - PINRemoteImage
     - Result
     - RxAtomic
     - RxCocoa
+    - RxDataSources
     - RxSwift
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
+  PINRemoteImage: 4ac4011c5caefd6befd99758e09becede05d3226
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
   RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
 
-PODFILE CHECKSUM: 401d0368cfa4e0ce0544c66360baadda4532b08d
+PODFILE CHECKSUM: ab263c6adb49afe2b1aaa07141a6022258e26ca0
 
 COCOAPODS: 1.5.3

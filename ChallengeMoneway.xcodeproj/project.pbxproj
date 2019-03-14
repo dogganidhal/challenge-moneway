@@ -26,6 +26,13 @@
 		78F4CA83223931C900FAF0FE /* CMRepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA81223931C900FAF0FE /* CMRepositoryCell.swift */; };
 		78F4CA84223931C900FAF0FE /* CMRepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F4CA82223931C900FAF0FE /* CMRepositoryCell.xib */; };
 		78F4CA862239367100FAF0FE /* CMSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA852239367100FAF0FE /* CMSearchViewModel.swift */; };
+		78F4CA8D2239D43E00FAF0FE /* CMRepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA8C2239D43E00FAF0FE /* CMRepositoryViewController.swift */; };
+		78F4CA8F2239D62700FAF0FE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA8E2239D62700FAF0FE /* Constants.swift */; };
+		78F4CA912239DB0700FAF0FE /* CMRepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA902239DB0700FAF0FE /* CMRepositoryViewModel.swift */; };
+		78F4CA952239DEB100FAF0FE /* CMCollaboratorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA932239DEB100FAF0FE /* CMCollaboratorCell.swift */; };
+		78F4CA962239DEB100FAF0FE /* CMCollaboratorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F4CA942239DEB100FAF0FE /* CMCollaboratorCell.xib */; };
+		78F4CA9A2239E40700FAF0FE /* CMBranchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA982239E40700FAF0FE /* CMBranchCell.swift */; };
+		78F4CA9B2239E40700FAF0FE /* CMBranchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F4CA992239E40700FAF0FE /* CMBranchCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +57,13 @@
 		78F4CA81223931C900FAF0FE /* CMRepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMRepositoryCell.swift; sourceTree = "<group>"; };
 		78F4CA82223931C900FAF0FE /* CMRepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CMRepositoryCell.xib; sourceTree = "<group>"; };
 		78F4CA852239367100FAF0FE /* CMSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSearchViewModel.swift; sourceTree = "<group>"; };
+		78F4CA8C2239D43E00FAF0FE /* CMRepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMRepositoryViewController.swift; sourceTree = "<group>"; };
+		78F4CA8E2239D62700FAF0FE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		78F4CA902239DB0700FAF0FE /* CMRepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMRepositoryViewModel.swift; sourceTree = "<group>"; };
+		78F4CA932239DEB100FAF0FE /* CMCollaboratorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCollaboratorCell.swift; sourceTree = "<group>"; };
+		78F4CA942239DEB100FAF0FE /* CMCollaboratorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CMCollaboratorCell.xib; sourceTree = "<group>"; };
+		78F4CA982239E40700FAF0FE /* CMBranchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBranchCell.swift; sourceTree = "<group>"; };
+		78F4CA992239E40700FAF0FE /* CMBranchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CMBranchCell.xib; sourceTree = "<group>"; };
 		A92FA7D192FAFFAD8EF8CB11 /* Pods-ChallengeMoneway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMoneway.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeMoneway/Pods-ChallengeMoneway.debug.xcconfig"; sourceTree = "<group>"; };
 		DD1664228CF24011F6357E33 /* Pods-ChallengeMoneway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMoneway.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeMoneway/Pods-ChallengeMoneway.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +111,7 @@
 		78E36D682236E77100D3912C /* ChallengeMoneway */ = {
 			isa = PBXGroup;
 			children = (
+				78F4CA872239CEB400FAF0FE /* Constants */,
 				78F4CA7322378F3700FAF0FE /* View */,
 				78F4CA7022378E2F00FAF0FE /* ViewModel */,
 				782D3E542237065300D3D2DD /* Api */,
@@ -112,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				78E36D6B2236E77100D3912C /* CMSearchViewController.swift */,
+				78F4CA8C2239D43E00FAF0FE /* CMRepositoryViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -169,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				78F4CA852239367100FAF0FE /* CMSearchViewModel.swift */,
+				78F4CA902239DB0700FAF0FE /* CMRepositoryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -176,6 +193,8 @@
 		78F4CA7322378F3700FAF0FE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				78F4CA972239E3F000FAF0FE /* CMBranchCell */,
+				78F4CA922239DE9300FAF0FE /* CMCollaboratorCell */,
 				78F4CA80223931B400FAF0FE /* CMRepositoryCell */,
 			);
 			path = View;
@@ -188,6 +207,32 @@
 				78F4CA82223931C900FAF0FE /* CMRepositoryCell.xib */,
 			);
 			path = CMRepositoryCell;
+			sourceTree = "<group>";
+		};
+		78F4CA872239CEB400FAF0FE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				78F4CA8E2239D62700FAF0FE /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		78F4CA922239DE9300FAF0FE /* CMCollaboratorCell */ = {
+			isa = PBXGroup;
+			children = (
+				78F4CA932239DEB100FAF0FE /* CMCollaboratorCell.swift */,
+				78F4CA942239DEB100FAF0FE /* CMCollaboratorCell.xib */,
+			);
+			path = CMCollaboratorCell;
+			sourceTree = "<group>";
+		};
+		78F4CA972239E3F000FAF0FE /* CMBranchCell */ = {
+			isa = PBXGroup;
+			children = (
+				78F4CA982239E40700FAF0FE /* CMBranchCell.swift */,
+				78F4CA992239E40700FAF0FE /* CMBranchCell.xib */,
+			);
+			path = CMBranchCell;
 			sourceTree = "<group>";
 		};
 		AAEC0368D5CDAA4600CD5E8E /* Frameworks */ = {
@@ -268,8 +313,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				78E36D742236E77500D3912C /* LaunchScreen.storyboard in Resources */,
+				78F4CA9B2239E40700FAF0FE /* CMBranchCell.xib in Resources */,
 				78F4CA84223931C900FAF0FE /* CMRepositoryCell.xib in Resources */,
 				78E36D712236E77500D3912C /* Assets.xcassets in Resources */,
+				78F4CA962239DEB100FAF0FE /* CMCollaboratorCell.xib in Resources */,
 				78E36D6F2236E77100D3912C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,19 +332,29 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ChallengeMoneway/Pods-ChallengeMoneway-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,12 +394,17 @@
 				78F4CA7D2237CE2100FAF0FE /* CMCacheProvider.swift in Sources */,
 				78F4CA6D223719C800FAF0FE /* CMCommit.swift in Sources */,
 				78F4CA65223714DB00FAF0FE /* CMGithubRepository.swift in Sources */,
+				78F4CA8F2239D62700FAF0FE /* Constants.swift in Sources */,
 				78F4CA792237A86100FAF0FE /* CMGithubProvider.swift in Sources */,
+				78F4CA8D2239D43E00FAF0FE /* CMRepositoryViewController.swift in Sources */,
 				78F4CA83223931C900FAF0FE /* CMRepositoryCell.swift in Sources */,
 				78F4CA67223716B100FAF0FE /* CMGithubUser.swift in Sources */,
+				78F4CA9A2239E40700FAF0FE /* CMBranchCell.swift in Sources */,
 				78E36D6C2236E77100D3912C /* CMSearchViewController.swift in Sources */,
 				78F4CA6F223719EB00FAF0FE /* CMCollaborator.swift in Sources */,
 				78F4CA69223717E800FAF0FE /* CMBranch.swift in Sources */,
+				78F4CA952239DEB100FAF0FE /* CMCollaboratorCell.swift in Sources */,
+				78F4CA912239DB0700FAF0FE /* CMRepositoryViewModel.swift in Sources */,
 				78E36D6A2236E77100D3912C /* CMApplicationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

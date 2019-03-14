@@ -28,6 +28,15 @@ class CMSearchViewController: UIViewController, UISearchBarDelegate {
         self.setupSearchController()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // TODO: Should be extracted to the coordinator layer
+        if segue.identifier == CMStoryboardSegueIdentifier.searchToRepository.rawValue {
+            guard let repository = sender as? CMGithubRepository,
+                let repositoryViewController = segue.destination as? CMRepositoryViewController else { return }
+            repositoryViewController.repository = repository
+        }
+    }
+    
     private func setupSearchController() {
         self.definesPresentationContext = true
         self.searchController.dimsBackgroundDuringPresentation = false
@@ -50,6 +59,15 @@ class CMSearchViewController: UIViewController, UISearchBarDelegate {
         self.searchController.searchBar.rx.text
             .map({ return $0 ?? "" })
             .bind(to: self.viewModel.query)
+            .disposed(by: self.disposeBag)
+        
+        self.tableView.rx.itemSelected
+            .subscribe(onNext: { [unowned self] indexPath in
+                if let cell = self.tableView.cellForRow(at: indexPath) as? CMRepositoryCell,
+                    let repository = cell.repository {
+                    self.performSegue(withIdentifier: CMStoryboardSegueIdentifier.searchToRepository.rawValue, sender: repository)
+                }
+            })
             .disposed(by: self.disposeBag)
         
     }

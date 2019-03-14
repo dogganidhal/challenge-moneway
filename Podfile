@@ -6,8 +6,10 @@ target 'ChallengeMoneway' do
   use_frameworks!
 
   # Pods for ChallengeMoneway
-  pod 'RxSwift',    '~> 4.0'
+  pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'Moya/RxSwift', '~> 12.0'
+  pod 'RxDataSources'
+  pod 'Moya/RxSwift'
+  pod 'PINRemoteImage'
 
 end
