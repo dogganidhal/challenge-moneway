@@ -11,17 +11,9 @@ import Foundation
 struct CMBranch: Codable {
     
     let name: String
-    let commit: CMCommit
-    let protected: Bool
-    let protection: CMPBranchProtection?
-    let protectionUrl: String?
     
     enum CodingKeys: String, CodingKey {
         case name
-        case commit
-        case protected
-        case protection
-        case protectionUrl = "protection_url"
     }
  
 }

@@ -20,12 +20,19 @@ typealias CMRepositoryTableViewSection = SectionModel<String, CMRepositoryTableV
 
 struct CMRepositoryViewModel {
     
-    private let provider: CMGithubProvider = CMGithubProvider()
+    private let githubProvider: CMGithubProvider = CMGithubProvider()
+    private let cacheProvider: CMCacheProvider = CMCacheProvider()
     private let repository: CMGithubRepository
     
+    private lazy var branches: Observable<[CMBranch]> = self.githubProvider
+        .getBranches(forRepository: self.repository.name, ownerId: self.repository.owner.login)
+        .map { (branches) -> [CMBranch] in
+            return branches
+        }
+    
     lazy var sections: Observable<[CMRepositoryTableViewSection]> = Observable.combineLatest(
-            self.provider.getBranches(forRepository: self.repository.name, ownerId: self.repository.owner.login),
-            self.provider.getContributors(forRepository: self.repository.name, ownerId: self.repository.owner.login)
+            self.githubProvider.getBranches(forRepository: self.repository.name, ownerId: self.repository.owner.login),
+            self.githubProvider.getContributors(forRepository: self.repository.name, ownerId: self.repository.owner.login)
         )
         .flatMap { (arg) -> Observable<[CMRepositoryTableViewSection]> in
             let (branches, contributors) = arg

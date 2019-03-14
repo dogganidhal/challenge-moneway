@@ -17,8 +17,6 @@
 		78F4CA65223714DB00FAF0FE /* CMGithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA64223714DB00FAF0FE /* CMGithubRepository.swift */; };
 		78F4CA67223716B100FAF0FE /* CMGithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA66223716B100FAF0FE /* CMGithubUser.swift */; };
 		78F4CA69223717E800FAF0FE /* CMBranch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA68223717E800FAF0FE /* CMBranch.swift */; };
-		78F4CA6B223719A900FAF0FE /* CMBranchProtection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA6A223719A900FAF0FE /* CMBranchProtection.swift */; };
-		78F4CA6D223719C800FAF0FE /* CMCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA6C223719C800FAF0FE /* CMCommit.swift */; };
 		78F4CA6F223719EB00FAF0FE /* CMContributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA6E223719EB00FAF0FE /* CMContributor.swift */; };
 		78F4CA792237A86100FAF0FE /* CMGithubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA782237A86100FAF0FE /* CMGithubProvider.swift */; };
 		78F4CA7B2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA7A2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift */; };
@@ -33,8 +31,11 @@
 		78F4CA962239DEB100FAF0FE /* CMContributorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F4CA942239DEB100FAF0FE /* CMContributorCell.xib */; };
 		78F4CA9A2239E40700FAF0FE /* CMBranchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA982239E40700FAF0FE /* CMBranchCell.swift */; };
 		78F4CA9B2239E40700FAF0FE /* CMBranchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F4CA992239E40700FAF0FE /* CMBranchCell.xib */; };
-		78F4CA9D223A832E00FAF0FE /* CMGithubRepositoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA9C223A832E00FAF0FE /* CMGithubRepositoryCache.swift */; };
+		78F4CA9D223A832E00FAF0FE /* CMCachedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA9C223A832E00FAF0FE /* CMCachedRepository.swift */; };
 		78F4CAA1223A85D200FAF0FE /* CMProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CAA0223A85D200FAF0FE /* CMProvider.swift */; };
+		78F4CAA5223ADDF300FAF0FE /* CMCachedContributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CAA4223ADDF300FAF0FE /* CMCachedContributor.swift */; };
+		78F4CAA7223ADF7A00FAF0FE /* CMCachedBranch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CAA6223ADF7A00FAF0FE /* CMCachedBranch.swift */; };
+		78F4CAA9223AF53C00FAF0FE /* CMCachedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CAA8223AF53C00FAF0FE /* CMCachedUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,8 +51,6 @@
 		78F4CA64223714DB00FAF0FE /* CMGithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMGithubRepository.swift; sourceTree = "<group>"; };
 		78F4CA66223716B100FAF0FE /* CMGithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMGithubUser.swift; sourceTree = "<group>"; };
 		78F4CA68223717E800FAF0FE /* CMBranch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBranch.swift; sourceTree = "<group>"; };
-		78F4CA6A223719A900FAF0FE /* CMBranchProtection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBranchProtection.swift; sourceTree = "<group>"; };
-		78F4CA6C223719C800FAF0FE /* CMCommit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCommit.swift; sourceTree = "<group>"; };
 		78F4CA6E223719EB00FAF0FE /* CMContributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMContributor.swift; sourceTree = "<group>"; };
 		78F4CA782237A86100FAF0FE /* CMGithubProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMGithubProvider.swift; sourceTree = "<group>"; };
 		78F4CA7A2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMGithubRepositorySearchResponse.swift; sourceTree = "<group>"; };
@@ -66,8 +65,11 @@
 		78F4CA942239DEB100FAF0FE /* CMContributorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CMContributorCell.xib; sourceTree = "<group>"; };
 		78F4CA982239E40700FAF0FE /* CMBranchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBranchCell.swift; sourceTree = "<group>"; };
 		78F4CA992239E40700FAF0FE /* CMBranchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CMBranchCell.xib; sourceTree = "<group>"; };
-		78F4CA9C223A832E00FAF0FE /* CMGithubRepositoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMGithubRepositoryCache.swift; sourceTree = "<group>"; };
+		78F4CA9C223A832E00FAF0FE /* CMCachedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCachedRepository.swift; sourceTree = "<group>"; };
 		78F4CAA0223A85D200FAF0FE /* CMProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMProvider.swift; sourceTree = "<group>"; };
+		78F4CAA4223ADDF300FAF0FE /* CMCachedContributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCachedContributor.swift; sourceTree = "<group>"; };
+		78F4CAA6223ADF7A00FAF0FE /* CMCachedBranch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCachedBranch.swift; sourceTree = "<group>"; };
+		78F4CAA8223AF53C00FAF0FE /* CMCachedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCachedUser.swift; sourceTree = "<group>"; };
 		A92FA7D192FAFFAD8EF8CB11 /* Pods-ChallengeMoneway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMoneway.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeMoneway/Pods-ChallengeMoneway.debug.xcconfig"; sourceTree = "<group>"; };
 		DD1664228CF24011F6357E33 /* Pods-ChallengeMoneway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMoneway.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeMoneway/Pods-ChallengeMoneway.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,14 +142,8 @@
 		78E36D7C2236E7F300D3912C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				78F4CA64223714DB00FAF0FE /* CMGithubRepository.swift */,
-				78F4CA66223716B100FAF0FE /* CMGithubUser.swift */,
-				78F4CA68223717E800FAF0FE /* CMBranch.swift */,
-				78F4CA6A223719A900FAF0FE /* CMBranchProtection.swift */,
-				78F4CA6C223719C800FAF0FE /* CMCommit.swift */,
-				78F4CA6E223719EB00FAF0FE /* CMContributor.swift */,
-				78F4CA7A2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift */,
-				78F4CA9C223A832E00FAF0FE /* CMGithubRepositoryCache.swift */,
+				78F4CAA3223ADDB500FAF0FE /* CacheEntities */,
+				78F4CAA2223ADD9D00FAF0FE /* Dto */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,6 +235,29 @@
 				78F4CA992239E40700FAF0FE /* CMBranchCell.xib */,
 			);
 			path = CMBranchCell;
+			sourceTree = "<group>";
+		};
+		78F4CAA2223ADD9D00FAF0FE /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				78F4CA64223714DB00FAF0FE /* CMGithubRepository.swift */,
+				78F4CA66223716B100FAF0FE /* CMGithubUser.swift */,
+				78F4CA68223717E800FAF0FE /* CMBranch.swift */,
+				78F4CA6E223719EB00FAF0FE /* CMContributor.swift */,
+				78F4CA7A2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		78F4CAA3223ADDB500FAF0FE /* CacheEntities */ = {
+			isa = PBXGroup;
+			children = (
+				78F4CA9C223A832E00FAF0FE /* CMCachedRepository.swift */,
+				78F4CAA8223AF53C00FAF0FE /* CMCachedUser.swift */,
+				78F4CAA4223ADDF300FAF0FE /* CMCachedContributor.swift */,
+				78F4CAA6223ADF7A00FAF0FE /* CMCachedBranch.swift */,
+			);
+			path = CacheEntities;
 			sourceTree = "<group>";
 		};
 		AAEC0368D5CDAA4600CD5E8E /* Frameworks */ = {
@@ -399,13 +418,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78F4CA6B223719A900FAF0FE /* CMBranchProtection.swift in Sources */,
 				78F4CA7B2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift in Sources */,
 				782D3E562237067000D3D2DD /* CMGithubApi.swift in Sources */,
-				78F4CA9D223A832E00FAF0FE /* CMGithubRepositoryCache.swift in Sources */,
+				78F4CA9D223A832E00FAF0FE /* CMCachedRepository.swift in Sources */,
 				78F4CA862239367100FAF0FE /* CMSearchViewModel.swift in Sources */,
 				78F4CA7D2237CE2100FAF0FE /* CMCacheProvider.swift in Sources */,
-				78F4CA6D223719C800FAF0FE /* CMCommit.swift in Sources */,
+				78F4CAA7223ADF7A00FAF0FE /* CMCachedBranch.swift in Sources */,
+				78F4CAA9223AF53C00FAF0FE /* CMCachedUser.swift in Sources */,
 				78F4CA65223714DB00FAF0FE /* CMGithubRepository.swift in Sources */,
 				78F4CA8F2239D62700FAF0FE /* Constants.swift in Sources */,
 				78F4CA792237A86100FAF0FE /* CMGithubProvider.swift in Sources */,
@@ -418,6 +437,7 @@
 				78F4CA6F223719EB00FAF0FE /* CMContributor.swift in Sources */,
 				78F4CA69223717E800FAF0FE /* CMBranch.swift in Sources */,
 				78F4CA952239DEB100FAF0FE /* CMContributorCell.swift in Sources */,
+				78F4CAA5223ADDF300FAF0FE /* CMCachedContributor.swift in Sources */,
 				78F4CA912239DB0700FAF0FE /* CMRepositoryViewModel.swift in Sources */,
 				78E36D6A2236E77100D3912C /* CMApplicationDelegate.swift in Sources */,
 			);

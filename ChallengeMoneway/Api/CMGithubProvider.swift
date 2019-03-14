@@ -14,8 +14,7 @@ class CMGithubProvider : CMProvider {
     
     static let shared: CMGithubProvider = CMGithubProvider()
     
-    let provider: MoyaProvider<CMGithubApi> = MoyaProvider()
-    let cacheProvider: CMCacheProvider = CMCacheProvider()
+    private let provider: MoyaProvider<CMGithubApi> = MoyaProvider()
     
     func search(_ query: String) -> Observable<[CMGithubRepository]> {
         return self.provider.rx.request(.searchRepositories(query: query))
@@ -24,7 +23,6 @@ class CMGithubProvider : CMProvider {
             .flatMapLatest({ (response) -> Observable<[CMGithubRepository]> in
                 return Observable.of(response.repositories)
             })
-            .catchErrorJustReturn([])
             .asObservable()
     }
     
@@ -32,7 +30,6 @@ class CMGithubProvider : CMProvider {
         return self.provider.rx.request(.getBranches(ownerId: ownerId, repositoryName: repositoryName))
             .asObservable()
             .map([CMBranch].self)
-            //            .catchErrorJustReturn(CMGithubRepositorySearchResponse()) TODO: return data from the cache
             .asObservable()
     }
     
@@ -40,7 +37,6 @@ class CMGithubProvider : CMProvider {
         return self.provider.rx.request(.getContributors(ownerId: ownerId, repositoryName: repositoryName))
             .asObservable()
             .map([CMContributor].self)
-            //            .catchErrorJustReturn(CMGithubRepositorySearchResponse()) TODO: return data from the cache
             .asObservable()
     }
     

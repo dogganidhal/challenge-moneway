@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "CMSearchViewController.viewDidLoad():CMSearchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.tableView.dataSource">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in CMGithubProvider.search(query:):CMGithubProvider.swift">
          <PersistentStrings>
             <PersistentString
@@ -11,11 +19,22 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #1 in ObservableType.subscribeProxyDataSource&lt;A&gt;(ofObject:dataSource:retainDataSource:binding:):DelegateProxyType.swift">
+      </ContextState>
+      <ContextState
          contextName = "CMSearchViewController.subscribeToSearchBarEvents():CMSearchViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "self.tableView.delegate">
             </PersistentString>
+            <PersistentString
+               value = "self.tableView.dataSource">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in CMSearchViewController.subscribeToSearchBarEvents():CMSearchViewController.swift">
+         <PersistentStrings>
             <PersistentString
                value = "self.tableView.dataSource">
             </PersistentString>
@@ -30,18 +49,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "CMSearchViewController.viewDidLoad():CMSearchViewController.swift">
+         contextName = "CMApplicationDelegate.application(_:didFinishLaunchingWithOptions:):CMApplicationDelegate.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.tableView.dataSource">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #2 in CMSearchViewController.subscribeToSearchBarEvents():CMSearchViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.tableView.dataSource">
+               value = "Realm.Configuration.defaultConfiguration">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

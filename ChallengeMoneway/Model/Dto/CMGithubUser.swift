@@ -1,5 +1,5 @@
 //
-//  CMCommit.swift
+//  CMGithubUser.swift
 //  ChallengeMoneway
 //
 //  Created by Nidhal DOGGA on 11/03/2019.
@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct CMCommit: Codable {
+struct CMGithubUser: Codable {
     
-    let sha: String
-    let url: String
+    let login: String
+    let avatarUrl: String
     
     enum CodingKeys: String, CodingKey {
-        case sha
-        case url
+        case login
+        case avatarUrl = "avatar_url"
     }
     
 }

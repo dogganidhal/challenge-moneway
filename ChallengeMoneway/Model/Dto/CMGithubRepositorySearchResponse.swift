@@ -10,16 +10,12 @@ import Foundation
 
 struct CMGithubRepositorySearchResponse: Codable {
     
-    let totalCount: Int
-    let hasMoreResults: Bool
     let repositories: [CMGithubRepository]
     
     enum CodingKeys: String, CodingKey {
-        case totalCount = "total_count"
-        case hasMoreResults = "incomplete_results"
         case repositories = "items"
     }
     
-    static var empty: CMGithubRepositorySearchResponse = CMGithubRepositorySearchResponse(totalCount: 0, hasMoreResults: false, repositories: [])
+    static var empty: CMGithubRepositorySearchResponse = CMGithubRepositorySearchResponse(repositories: [])
     
 }
