@@ -1,11 +1,12 @@
 # challenge-moneway
 
-Application iOS en Swift qui récupére une liste de dépôts depuis [l'API de GitHub](https://api.github.com)
+Application iOS en Swift qui cherche les dépôts depuis [l'API de GitHub](https://api.github.com)
 
 L'application est composée de 2 parties :
 
-Une vue avec un champ de recherche et un UITableView pour afficher les dépôts récupérés depuis l'API de GitHub,
-Une vue avec un second UITableView pour afficher les branches et les contributeurs avec leur image de profil. 
+- Une vue avec un champ de recherche et un UITableView pour afficher les dépôts récupérés depuis l'API de GitHub,
+
+- Une vue avec un second UITableView pour afficher les branches et les contributeurs avec leur image de profil. 
 
 ---
 
