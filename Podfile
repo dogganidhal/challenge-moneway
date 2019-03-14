@@ -11,5 +11,7 @@ target 'ChallengeMoneway' do
   pod 'RxDataSources'
   pod 'Moya/RxSwift'
   pod 'PINRemoteImage'
+  pod 'RealmSwift'
+  pod 'RxRealm'
 
 end

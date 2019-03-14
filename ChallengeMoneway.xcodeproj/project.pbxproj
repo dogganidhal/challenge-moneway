@@ -33,6 +33,8 @@
 		78F4CA962239DEB100FAF0FE /* CMContributorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F4CA942239DEB100FAF0FE /* CMContributorCell.xib */; };
 		78F4CA9A2239E40700FAF0FE /* CMBranchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA982239E40700FAF0FE /* CMBranchCell.swift */; };
 		78F4CA9B2239E40700FAF0FE /* CMBranchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F4CA992239E40700FAF0FE /* CMBranchCell.xib */; };
+		78F4CA9D223A832E00FAF0FE /* CMGithubRepositoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CA9C223A832E00FAF0FE /* CMGithubRepositoryCache.swift */; };
+		78F4CAA1223A85D200FAF0FE /* CMProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4CAA0223A85D200FAF0FE /* CMProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		78F4CA942239DEB100FAF0FE /* CMContributorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CMContributorCell.xib; sourceTree = "<group>"; };
 		78F4CA982239E40700FAF0FE /* CMBranchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBranchCell.swift; sourceTree = "<group>"; };
 		78F4CA992239E40700FAF0FE /* CMBranchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CMBranchCell.xib; sourceTree = "<group>"; };
+		78F4CA9C223A832E00FAF0FE /* CMGithubRepositoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMGithubRepositoryCache.swift; sourceTree = "<group>"; };
+		78F4CAA0223A85D200FAF0FE /* CMProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMProvider.swift; sourceTree = "<group>"; };
 		A92FA7D192FAFFAD8EF8CB11 /* Pods-ChallengeMoneway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMoneway.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeMoneway/Pods-ChallengeMoneway.debug.xcconfig"; sourceTree = "<group>"; };
 		DD1664228CF24011F6357E33 /* Pods-ChallengeMoneway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMoneway.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeMoneway/Pods-ChallengeMoneway.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +90,7 @@
 				782D3E552237067000D3D2DD /* CMGithubApi.swift */,
 				78F4CA782237A86100FAF0FE /* CMGithubProvider.swift */,
 				78F4CA7C2237CE2100FAF0FE /* CMCacheProvider.swift */,
+				78F4CAA0223A85D200FAF0FE /* CMProvider.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 				78F4CA6C223719C800FAF0FE /* CMCommit.swift */,
 				78F4CA6E223719EB00FAF0FE /* CMContributor.swift */,
 				78F4CA7A2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift */,
+				78F4CA9C223A832E00FAF0FE /* CMGithubRepositoryCache.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -337,10 +343,13 @@
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -351,10 +360,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +402,7 @@
 				78F4CA6B223719A900FAF0FE /* CMBranchProtection.swift in Sources */,
 				78F4CA7B2237A94600FAF0FE /* CMGithubRepositorySearchResponse.swift in Sources */,
 				782D3E562237067000D3D2DD /* CMGithubApi.swift in Sources */,
+				78F4CA9D223A832E00FAF0FE /* CMGithubRepositoryCache.swift in Sources */,
 				78F4CA862239367100FAF0FE /* CMSearchViewModel.swift in Sources */,
 				78F4CA7D2237CE2100FAF0FE /* CMCacheProvider.swift in Sources */,
 				78F4CA6D223719C800FAF0FE /* CMCommit.swift in Sources */,
@@ -397,6 +410,7 @@
 				78F4CA8F2239D62700FAF0FE /* Constants.swift in Sources */,
 				78F4CA792237A86100FAF0FE /* CMGithubProvider.swift in Sources */,
 				78F4CA8D2239D43E00FAF0FE /* CMRepositoryViewController.swift in Sources */,
+				78F4CAA1223A85D200FAF0FE /* CMProvider.swift in Sources */,
 				78F4CA83223931C900FAF0FE /* CMRepositoryCell.swift in Sources */,
 				78F4CA67223716B100FAF0FE /* CMGithubUser.swift in Sources */,
 				78F4CA9A2239E40700FAF0FE /* CMBranchCell.swift in Sources */,

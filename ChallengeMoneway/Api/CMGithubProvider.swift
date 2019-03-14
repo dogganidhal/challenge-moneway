@@ -10,18 +10,21 @@ import Foundation
 import Moya
 import RxSwift
 
-class CMGithubProvider {
+class CMGithubProvider : CMProvider {
     
     static let shared: CMGithubProvider = CMGithubProvider()
     
     let provider: MoyaProvider<CMGithubApi> = MoyaProvider()
     let cacheProvider: CMCacheProvider = CMCacheProvider()
     
-    func search(_ query: String) -> Observable<CMGithubRepositorySearchResponse> {
+    func search(_ query: String) -> Observable<[CMGithubRepository]> {
         return self.provider.rx.request(.searchRepositories(query: query))
             .asObservable()
             .map(CMGithubRepositorySearchResponse.self)
-            .catchErrorJustReturn(.empty)
+            .flatMapLatest({ (response) -> Observable<[CMGithubRepository]> in
+                return Observable.of(response.repositories)
+            })
+            .catchErrorJustReturn([])
             .asObservable()
     }
     
