@@ -17,7 +17,7 @@ class CMSearchViewModel {
     
     let query: BehaviorRelay<String> = BehaviorRelay(value: String())
     
-    lazy var repositories: Observable<[CMGithubRepository]> = self.query.asObservable()
+    lazy var repositories: Observable<[CMGithubRepository]> = self.query
         .throttle(0.2, scheduler: MainScheduler.instance)
         .skipWhile({ $0.count < 2 })
         .distinctUntilChanged()
@@ -31,6 +31,5 @@ class CMSearchViewModel {
             return self.query.flatMapLatest(self.cacheProvider.search)
         })
         .ifEmpty(switchTo: self.query.flatMapLatest(self.cacheProvider.search))
-        .asObservable()
     
 }

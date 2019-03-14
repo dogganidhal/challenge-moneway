@@ -12,6 +12,7 @@ import RealmSwift
 
 class CMCachedContributor : Object {
     
+    @objc dynamic var key: String = ""
     @objc dynamic var login: String = ""
     @objc dynamic var avatarUrl: String = ""
     @objc dynamic var repositoryFullName: String = ""
@@ -25,6 +26,7 @@ class CMCachedContributor : Object {
         self.login = contributor.login
         self.avatarUrl = contributor.avatarUrl
         self.repositoryFullName = repositoryFullName
+        self.key = "\(self.login)@\(self.repositoryFullName)"
     }
     
     required init() {
@@ -40,7 +42,7 @@ class CMCachedContributor : Object {
     }
     
     override static func primaryKey() -> String? {
-        return "login"
+        return "key"
     }
     
 }

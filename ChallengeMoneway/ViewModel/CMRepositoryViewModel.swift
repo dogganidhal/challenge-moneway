@@ -18,22 +18,35 @@ enum CMRepositoryTableViewRowModel {
 
 typealias CMRepositoryTableViewSection = SectionModel<String, CMRepositoryTableViewRowModel>
 
-struct CMRepositoryViewModel {
+class CMRepositoryViewModel {
     
-    private let githubProvider: CMGithubProvider = CMGithubProvider()
-    private let cacheProvider: CMCacheProvider = CMCacheProvider()
+    private let githubProvider: CMGithubProvider = CMGithubProvider.shared
+    private let cacheProvider: CMCacheProvider = CMCacheProvider.shared
     private let repository: CMGithubRepository
     
     private lazy var branches: Observable<[CMBranch]> = self.githubProvider
         .getBranches(forRepository: self.repository.name, ownerId: self.repository.owner.login)
-        .map { (branches) -> [CMBranch] in
-            return branches
+        .flatMapLatest { [unowned self] (branches) -> Observable<[CMBranch]> in
+            self.cacheProvider.cacheBranches(branches, repositoryFullName: self.repository.fullName)
+            return Observable.of(branches)
         }
+        .catchError { [unowned self] (error) -> Observable<[CMBranch]> in
+            return self.cacheProvider.getBranches(forRepository: self.repository.name, ownerId: self.repository.owner.login)
+        }
+        .ifEmpty(switchTo: self.cacheProvider.getBranches(forRepository: self.repository.name, ownerId: self.repository.owner.login))
     
-    lazy var sections: Observable<[CMRepositoryTableViewSection]> = Observable.combineLatest(
-            self.githubProvider.getBranches(forRepository: self.repository.name, ownerId: self.repository.owner.login),
-            self.githubProvider.getContributors(forRepository: self.repository.name, ownerId: self.repository.owner.login)
-        )
+    private lazy var contributors: Observable<[CMContributor]> = self.githubProvider
+        .getContributors(forRepository: self.repository.name, ownerId: self.repository.owner.login)
+        .flatMapLatest { [unowned self] (branches) -> Observable<[CMContributor]> in
+            self.cacheProvider.cacheContributors(branches, repositoryFullName: self.repository.fullName)
+            return Observable.of(branches)
+        }
+        .catchError { [unowned self] (error) -> Observable<[CMContributor]> in
+            return self.cacheProvider.getContributors(forRepository: self.repository.name, ownerId: self.repository.owner.login)
+        }
+        .ifEmpty(switchTo: self.cacheProvider.getContributors(forRepository: self.repository.name, ownerId: self.repository.owner.login))
+    
+    lazy var sections: Observable<[CMRepositoryTableViewSection]> = Observable.combineLatest(self.branches, self.contributors)
         .flatMap { (arg) -> Observable<[CMRepositoryTableViewSection]> in
             let (branches, contributors) = arg
             let brancheRows = branches.map({ (branch) -> CMRepositoryTableViewRowModel in

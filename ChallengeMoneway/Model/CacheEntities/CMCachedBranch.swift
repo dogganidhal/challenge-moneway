@@ -12,6 +12,7 @@ import RealmSwift
 
 class CMCachedBranch : Object {
     
+    @objc dynamic var key: String = ""
     @objc dynamic var name: String = ""
     @objc dynamic var repositoryFullName: String = ""
     
@@ -23,6 +24,7 @@ class CMCachedBranch : Object {
         super.init()
         self.name = branch.name
         self.repositoryFullName = repositoryFullName
+        self.key = "\(self.repositoryFullName)@\(self.name)"
     }
     
     required init() {
@@ -38,7 +40,7 @@ class CMCachedBranch : Object {
     }
     
     override static func primaryKey() -> String? {
-        return "name"
+        return "key"
     }
     
 }
