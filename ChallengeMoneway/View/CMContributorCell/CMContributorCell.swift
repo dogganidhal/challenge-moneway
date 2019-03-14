@@ -9,6 +9,7 @@
 import UIKit
 import Moya
 import RxSwift
+import PINRemoteImage
 
 class CMContributorCell: UITableViewCell {
 
@@ -19,9 +20,21 @@ class CMContributorCell: UITableViewCell {
     
     var contributor: CMContributor? {
         didSet {
-            self.contributorNameLabel.text = self.contributor?.login
-            
+            if let contributor = self.contributor {
+                self.contributorNameLabel.text = contributor.login
+                self.contributorPhotoImageView.pin_setImage(from: URL(string: contributor.avatarUrl))
+            }
         }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.setupImageView()
+    }
+    
+    private func setupImageView() {
+        self.contributorPhotoImageView.layer.masksToBounds = true
+        self.contributorPhotoImageView.layer.cornerRadius = 32
     }
     
 }
