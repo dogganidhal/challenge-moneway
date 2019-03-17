@@ -24,7 +24,7 @@ L'application est composée de 2 parties :
 
 * Cloner le dépôt :
 ```
-git clone https://github.com/dogganidhal/challenge-moneway && cd ChallengeMoneway
+git clone https://github.com/dogganidhal/challenge-moneway && cd challenge-moneway
 ```
   
 * Installer les pods :
